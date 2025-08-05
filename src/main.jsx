@@ -3,8 +3,13 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
+/* context */
+import { EditorProvider } from './context/EditorContext';
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <EditorProvider>
+      <App />
+    </EditorProvider>
   </StrictMode>,
 )
